@@ -71,3 +71,10 @@ var sum = function(a,b){
     console.log(a+b);
 }
 sum(5,5);
+
+
+//Arrow Functions
+var sum= (a,b) =>{
+    console.log(a+b);
+}
+sum(4,5);
