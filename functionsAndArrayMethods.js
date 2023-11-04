@@ -23,16 +23,53 @@ console.log("Find => ", newArray3)
 
 
 // 4. Reduce 
-var newArray4 =   array.reduce((data,index)=>{
-    return data + index;
+var newArray4 =   array.reduce((accumulator,currentValue)=>{
+    return accumulator + currentValue;
 })
 console.log(newArray4)
 
 var FlipkartCart = [
     {
-        
-    }
-]
+       price: 200,
+       quantity: 2
+    },
+    {
+        price: 400,
+        quantity: 1
+     },
+     {
+        price: 100,
+        quantity: 4
+     },
+     {
+        price: 1200,
+        quantity: 2
+     }
+];
+
+var totalCost = FlipkartCart.reduce((accumulator,currentValue) => {
+    return accumulator+ currentValue.price * currentValue.quantity;
+},0);
+
+console.log(totalCost);
+
+// Promises
+// It is an object that returns that we hope to receive in the future but not immediatley
+
+// Syntax : var myPromise = new Promise(() =>{})
+
+var myPromise = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve("Success");
+    },3000);
+    
+    reject("Error Occured");
+
+});
+myPromise
+.then((data)=>{console.log(data)})
+.catch((err)=>{console.log(err)});
+
 
 
 
