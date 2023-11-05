@@ -58,18 +58,37 @@ console.log(totalCost);
 
 // Syntax : var myPromise = new Promise(() =>{})
 
-var myPromise = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        resolve("Success");
-    },3000);
+// var myPromise = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve("Success");
+//     },3000);
     
-    reject("Error Occured");
+//     reject("Error Occured");
 
-});
-myPromise
-.then((data)=>{console.log(data)})
-.catch((err)=>{console.log(err)});
-
-
+// });
+// myPromise
+// .then((data)=>{console.log(data)})
+// .catch((err)=>{console.log(err)});
 
 
+
+//Async And Await in Js
+
+//  setTimeout(function(){
+//     console.log("1");
+//  },3000); 
+//  console.log("2");
+
+
+//  var myPromise = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve("success")
+//     },3000);
+//  });
+
+//  var getOurPromise = async () =>{
+//     var getOurPromiseResult = await myPromise;
+//     console.log(getOurPromiseResult);
+//  } ;
+
+//  getOurPromise()
